@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework.iml" filepath="$PROJECT_DIR$/kooing-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-aop/kooing-framework-aop.iml" filepath="$PROJECT_DIR$/kooing-framework-aop/kooing-framework-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-cache/kooing-framework-cache.iml" filepath="$PROJECT_DIR$/kooing-framework-cache/kooing-framework-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-dependency/kooing-framework-dependency.iml" filepath="$PROJECT_DIR$/kooing-framework-dependency/kooing-framework-dependency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-exception/kooing-framework-exception.iml" filepath="$PROJECT_DIR$/kooing-framework-exception/kooing-framework-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-filter/kooing-framework-filter.iml" filepath="$PROJECT_DIR$/kooing-framework-filter/kooing-framework-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-log/kooing-framework-log.iml" filepath="$PROJECT_DIR$/kooing-framework-log/kooing-framework-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-param/kooing-framework-param.iml" filepath="$PROJECT_DIR$/kooing-framework-param/kooing-framework-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-persistent/kooing-framework-persistent.iml" filepath="$PROJECT_DIR$/kooing-framework-persistent/kooing-framework-persistent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-rbmq/kooing-framework-rbmq.iml" filepath="$PROJECT_DIR$/kooing-framework-rbmq/kooing-framework-rbmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kooing-framework-utils/kooing-framework-utils.iml" filepath="$PROJECT_DIR$/kooing-framework-utils/kooing-framework-utils.iml" />
+    </modules>
+  </component>
+</project>
