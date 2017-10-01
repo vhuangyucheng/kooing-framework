@@ -23,10 +23,31 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="framework" />
+        <module name="kooing-framework-aop" />
+        <module name="kooing-framework-cache" />
+        <module name="kooing-framework-dependency" />
+        <module name="kooing-framework-exception" />
+        <module name="kooing-framework-filter" />
+        <module name="kooing-framework-log" />
+        <module name="kooing-framework-param" />
+        <module name="kooing-framework-persistent" />
+        <module name="kooing-framework-rbmq" />
+        <module name="kooing-framework-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="framework" target="1.5" />
+      <module name="kooing-framework" target="1.8" />
+      <module name="kooing-framework-aop" target="1.8" />
+      <module name="kooing-framework-cache" target="1.8" />
+      <module name="kooing-framework-dependency" target="1.8" />
+      <module name="kooing-framework-exception" target="1.8" />
+      <module name="kooing-framework-filter" target="1.8" />
+      <module name="kooing-framework-log" target="1.8" />
+      <module name="kooing-framework-param" target="1.8" />
+      <module name="kooing-framework-persistent" target="1.8" />
+      <module name="kooing-framework-rbmq" target="1.8" />
+      <module name="kooing-framework-utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

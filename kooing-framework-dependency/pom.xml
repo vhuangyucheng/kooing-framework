@@ -11,5 +11,13 @@
 
     <artifactId>kooing-framework-dependency</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.kooing</groupId>
+            <artifactId>kooing-framework-log</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

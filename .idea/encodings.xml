@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-cache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-dependency" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-exception" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-filter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-param" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-persistent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-rbmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kooing-framework-utils" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
