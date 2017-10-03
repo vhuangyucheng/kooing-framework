@@ -16,5 +16,7 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:5.1.34" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.1" level="project" />
+    <orderEntry type="module" module-name="kooing-framework-utils" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.14.8" level="project" />
   </component>
 </module>
