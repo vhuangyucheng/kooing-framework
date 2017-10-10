@@ -34,6 +34,9 @@
         <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
 
+        <!-- 启动 -->
+        <guava.version>15.0</guava.version>
+
         <!-- db -->
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis.spring.version>1.2.1</mybatis.spring.version>
@@ -42,6 +45,10 @@
 
         <!-- lombok -->
         <lombok.version>1.14.8</lombok.version>
+
+        <!-- validator -->
+        <validation-api.version>1.1.0.Final</validation-api.version>
+        <hibernate-validator.version>5.3.0.Alpha1</hibernate-validator.version>
 
         <!-- spring -->
         <springframework.version>4.0.0.RELEASE</springframework.version>
@@ -69,7 +76,7 @@
         <jackson.version>1.9.12</jackson.version>
 
         <!-- dubbo -->
-        <dubbo.version>2.8.3</dubbo.version>
+        <dubbo.version>2.5.3</dubbo.version>
 
         <jboss.resteasy.version>3.0.14.Final</jboss.resteasy.version>
     </properties>
@@ -292,6 +299,65 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>3.0.1</version>
             </dependency>
+
+            <!-- 启动 -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.18.2-GA</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>3.2.5.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.12.1.GA</version>
+            </dependency>
+
+            <!-- netty通信框架 -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.0.24.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>3.7.0.Final</version>
+            </dependency>
+
+            <!-- 如果要使用netty server -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-netty</artifactId>
+                <version>${jboss.resteasy.version}</version>
+            </dependency>
+
+            <!-- JSR 303 with Hibernate Validator -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-validator</groupId>
+                <artifactId>commons-validator</artifactId>
+                <version>1.4.1</version>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>

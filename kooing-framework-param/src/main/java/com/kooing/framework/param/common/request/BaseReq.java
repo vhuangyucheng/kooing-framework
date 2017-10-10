@@ -12,7 +12,6 @@ import java.io.Serializable;
  * Created by Administrator on 2017/10/9.
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
 public class BaseReq implements Serializable{
 
     private static final long serialVersionUID = 6947098193840850628L;
@@ -26,6 +25,7 @@ public class BaseReq implements Serializable{
     protected String startTime;
     protected String endTime;
 
+    //暂时不知道什么用的
     protected void WritePageClient(Request request, Object commResp) {
         JSONObject json = JSONObject.fromObject(commResp);
         Response.status(Response.Status.OK).entity(json).type("text/plain;charset=UTF-8").build();
