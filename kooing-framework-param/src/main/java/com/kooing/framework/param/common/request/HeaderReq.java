@@ -9,9 +9,7 @@ import java.io.Serializable;
  * Created by Administrator on 2017/10/10.
  */
 @Data
-public class HeaderReq extends BaseReq implements Serializable{
-
-    private static final long serialVersionUID = -2908754934344547599L;
+public class HeaderReq extends BaseReq {
 
     @Valid
     private String method;//API接口名称

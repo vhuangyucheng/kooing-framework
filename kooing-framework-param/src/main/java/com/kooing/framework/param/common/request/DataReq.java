@@ -9,6 +9,7 @@ import java.io.Serializable;
 /**
  * Created by Administrator on 2017/10/10.
  */
+
 @Data
 public class DataReq<T> implements Serializable{
 
