@@ -19,9 +19,9 @@ public class PageView<T> implements Serializable {
     /**总页数**/
     private long totalPage = 1;
     /**每页显示记录数**/
-    private int maxResult = 12;
+    private int pageSize = 12;
     /**当前页**/
-    private int currentPage = 1;
+    private int pageIndex = 1;
     /**总记录数**/
     private long totalRecord;
     /**当分页是：1只查询总记录数，2不查询总记录数，只返回列表数据，3其他值既查询总数据又返回列表数据**/
@@ -63,36 +63,37 @@ public class PageView<T> implements Serializable {
         return this.pageSumCount==1;
     }
 
-    public PageView(int maxResult, int currentPage){
-        if(currentPage <= 0){
-            currentPage = 1;
+    public PageView(int pageSize, int pageIndex){
+        if(pageIndex <= 0){
+            pageIndex = 1;
         }
-        this.maxResult = maxResult;
-        this.currentPage = currentPage;
+        this.pageSize = pageSize;
+        this.pageIndex = pageIndex;
     }
 
-    public PageView(int maxResult, int currentPage, String sortName, String sortOrder){
-        if(currentPage <= 0){
-            currentPage = 1;
+    public PageView(int pageSize, int pageIndex, String sortName, String sortOrder){
+        if(pageIndex <= 0){
+            pageIndex = 1;
         }
-        this.maxResult = maxResult;
-        this.currentPage = currentPage;
+        this.pageSize = pageSize;
+        this.pageIndex = pageIndex;
         this.sortName = sortName;
         this.sortOrder = sortOrder;
     }
 
-    public PageView(int maxResult, int currentPage, long totalRecord, List<T> resultMapList){
-        if(currentPage <= 0){
-            currentPage = 1;
+    public PageView(int pageSize, int pageIndex, long totalRecord, List<T> resultMapList){
+        if(pageIndex <= 0){
+            pageIndex = 1;
         }
-        this.maxResult = maxResult;
-        this.currentPage = currentPage;
-        this.
+        this.pageSize = pageSize;
+        this.pageIndex = pageIndex;
+        setTotalRecordWrap(totalRecord);
+        this.resultMapList = resultMapList;
     }
     /**
      * @Author      : kooing
      * @Date        : 2017/10/11 22:15
-     * @Desription  : 总记录0的时候页数是0，对简单的set方法封装一下
+     * @Desription  : 总记录0的时候页数是0，页面数优化，对简单的set方法封装一下
      * @return      : void
      */
     public void setTotalRecordWrap(long totalRecord){
@@ -101,7 +102,7 @@ public class PageView<T> implements Serializable {
             setTotalPage(0);
             return;
         }
-        //this.totalRecord % this.maxResult
-        setTotalPage();
+        //this.totalRecord % this.pageSize == 0 ? this.totalrecord/this.pageSize : this.totalrecord/this.pageSize+1);
+        setTotalPage(this.totalRecord % this.pageSize == 0 ? this.totalRecord/this.pageSize : this.totalRecord/this.pageSize+1);
     }
 }
