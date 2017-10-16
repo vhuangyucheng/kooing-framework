@@ -1,7 +1,6 @@
 package com.kooing.framework.param.common.request;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import net.sf.json.JSONObject;
 
 import javax.ws.rs.core.Request;
