@@ -37,6 +37,9 @@
         <!-- 启动 -->
         <guava.version>15.0</guava.version>
 
+        <!-- zookeeper -->
+        <zookeeper.version>0.1</zookeeper.version>
+
         <!-- db -->
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis.spring.version>1.2.1</mybatis.spring.version>
@@ -81,7 +84,15 @@
         <jboss.resteasy.version>3.0.14.Final</jboss.resteasy.version>
     </properties>
     <dependencyManagement>
+
         <dependencies>
+            <!-- zookeeper -->
+
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
             <!-- mybatis start -->
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -298,6 +309,32 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>3.0.1</version>
+            </dependency>
+
+            <!-- 如果要使用Sun HTTP server -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jdk-http</artifactId>
+                <version>${jboss.resteasy.version}</version>
+            </dependency>
+            <!-- jetty -->
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty</artifactId>
+                <version>7.0.0.pre5</version>
+            </dependency>
+
+
+            <!-- 如果要使用tomcat server -->
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>8.0.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-logging-juli</artifactId>
+                <version>8.0.11</version>
             </dependency>
 
             <!-- 启动 -->
