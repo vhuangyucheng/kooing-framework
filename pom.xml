@@ -67,9 +67,11 @@
         <jstl.version>1.2</jstl.version>
 
         <!-- log -->
-        <slf4j.version>1.7.5</slf4j.version>
-        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <log4j.version>2.4.1</log4j.version>
         <logback.version>1.0.7</logback.version>
+        <log4j-slf4j.version>2.4.1</log4j-slf4j.version>
+        <log4j-jcl.version>2.2</log4j-jcl.version>
 
         <log4jdbc-log4j2-jdbc4.1.version>1.15</log4jdbc-log4j2-jdbc4.1.version>
         <log4jdbc-log4j2-jdbc4.version>1.15</log4jdbc-log4j2-jdbc4.version>
@@ -86,6 +88,37 @@
     <dependencyManagement>
 
         <dependencies>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency> <!-- 桥接：告诉Slf4j使用Log4j2 -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>${log4j-slf4j.version}</version>
+            </dependency>
+
+            <dependency> <!-- 桥接：告诉commons logging使用Log4j2 -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-jcl</artifactId>
+                <version>${log4j-jcl.version}</version>
+            </dependency>
+
+
             <!-- zookeeper -->
 
             <dependency>
@@ -290,6 +323,10 @@
                         <artifactId>spring</artifactId>
                         <groupId>org.springframework</groupId>
                     </exclusion>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -458,5 +495,7 @@
         </plugins>
 
     </build>
+
+
 
 </project>
