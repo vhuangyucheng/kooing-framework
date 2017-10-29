@@ -38,7 +38,8 @@
         <guava.version>15.0</guava.version>
 
         <!-- zookeeper -->
-        <zookeeper.version>0.1</zookeeper.version>
+        <zookeeper.version>3.4.5</zookeeper.version>
+        <zkClient.version>0.3</zkClient.version>
 
         <!-- db -->
         <mybatis.version>3.2.8</mybatis.version>
@@ -118,13 +119,29 @@
                 <version>${log4j-jcl.version}</version>
             </dependency>
 
-
+            <!-- 注册中心zookeeper begin -->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- 注册中心zookeeper end -->
             <!-- zookeeper -->
 
             <dependency>
-                <groupId>com.github.sgroschupf</groupId>
+                <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
-                <version>${zookeeper.version}</version>
+                <version>${zkClient.version}</version>
             </dependency>
             <!-- mybatis start -->
             <dependency>
@@ -278,24 +295,14 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            <!-- slf4j-log4j绑定 -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
+
             <!-- common-logging to slf4j -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            <!-- log4j -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
+
             <!-- dubbo rest -->
             <dependency>
                 <groupId>javax.ws.rs</groupId>
