@@ -13,7 +13,7 @@ public class CommResp<T> extends BaseResp {
 
     protected String code;//是否成功
 
-    protected String msg;//消息
+    protected String message;//消息
 
     protected Pagination pagination;//分页
 

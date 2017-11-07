@@ -36,8 +36,11 @@ public class HeaderReq extends BaseReq {
     private String storeId;//商店id
 
     private String reqOrg;//请求来源("mobile","pcShop","pcSys")
-    /****当分页1：只查询总记录数，2不查询总记录数，只返回列表数据，其他值既查询总纪录又返回列表数据*/
-    private String pageSumCount;
-    /****当分页：只查询数据，不做分页***/
-    private String pageDisable;
+
+    /** 是否分页:0分页，1不分页*/
+    private String isPage;
+    /** 当前页 */
+    private String pageNum;
+    /** 页行数*/
+    private String pageSize;
 }
