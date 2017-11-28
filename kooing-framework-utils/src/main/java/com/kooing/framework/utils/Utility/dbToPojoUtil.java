@@ -14,7 +14,7 @@ import java.util.*;
 import java.util.Date;
 
 @Data
-public class DbToPojoUtil {
+public class dbToPojoUtil {
 
     private String packageOutPath = "com.user.entity";//指定实体生成所在包的路径
     private String authorName = "kooing";//作者名字
@@ -42,7 +42,7 @@ public class DbToPojoUtil {
     /*
      * 构造函数
      */
-    public DbToPojoUtil() {
+    public dbToPojoUtil() {
         Properties properties = new Properties();
         try {
             //读取属性文件a.propertiesD:\ideaWorkSpace\dbToPojoUtil\src\main\resources\properties\dbToPojoUtil.properties
@@ -264,7 +264,7 @@ public class DbToPojoUtil {
      * @param args
      */
     public static void main(String[] args) {
-        new DbToPojoUtil();
+        new dbToPojoUtil();
 
     }
 }
