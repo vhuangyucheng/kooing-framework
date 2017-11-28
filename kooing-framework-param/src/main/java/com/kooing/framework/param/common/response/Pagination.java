@@ -1,8 +1,10 @@
 package com.kooing.framework.param.common.response;
 
+import com.github.pagehelper.PageInfo;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author      : kooing
@@ -14,11 +16,25 @@ public class Pagination implements Serializable {
 
     private static final long serialVersionUID = -5311077762660334862L;
     /** 当前页*/
-    protected String pageNum;
+    protected Integer pageNum;
     /** 一页的纪录数*/
-    protected String pageSize;
+    protected Integer pageSize;
     /** 总记录数*/
-    protected String total;
+    protected Integer total;
     /** 总页数*/
-    protected String pages;
+    protected Integer pages;
+
+    /**
+     * @author      : kooing
+     * @Date        : 2017/11/9 12:06
+     * @Desription  : 构造函数使用pagehelper获得total和pages
+     * @return      :
+     */
+    public Pagination(List<?> list){
+        PageInfo page = new PageInfo(list);
+        Long total = page.getTotal();
+        int pages = page.getPages();
+        setTotal(total.intValue());
+        setPages(pages);
+    }
 }

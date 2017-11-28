@@ -36,7 +36,10 @@ public class HeaderReq extends BaseReq {
     private String storeId;//商店id
 
     private String reqOrg;//请求来源("mobile","pcShop","pcSys")
-
+    /** 排序正序还是倒叙*/
+    private String desc;
+    /** 排序根据的字段*/
+    private String orderBy;
     /** 是否分页:0分页，1不分页*/
     private String isPage;
     /** 当前页 */
