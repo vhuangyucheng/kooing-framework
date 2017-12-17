@@ -95,11 +95,21 @@
         <!--jjwt-->
         <jjwt.version>0.9.0</jjwt.version>
 
+        <!--redis-->
+        <jedis.version>2.9.0</jedis.version>
+
     </properties>
     <dependencyManagement>
 
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+            <!--redis-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+            <!-- jjwt -->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>

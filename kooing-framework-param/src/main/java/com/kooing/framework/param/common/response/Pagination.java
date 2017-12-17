@@ -37,4 +37,14 @@ public class Pagination implements Serializable {
         setTotal(total.intValue());
         setPages(pages);
     }
+
+    /**
+     * @author      : kooing
+     * @Date        : 2017/11/9 12:06
+     * @Desription  : 无参
+     * @return      :
+     */
+    public Pagination(){
+
+    }
 }
