@@ -130,8 +130,8 @@
             <scope>compile</scope>
             <exclusions>
                 <exclusion>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -168,22 +168,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- 启动 -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.javassist</groupId>
-            <artifactId>javassist</artifactId>
-            <version>3.18.2-GA</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.netty</groupId>
-            <artifactId>netty</artifactId>
-            <version>3.2.5.Final</version>
-        </dependency>
+
 
         <!--jetty-->
         <dependency>
@@ -191,11 +176,8 @@
             <artifactId>jetty</artifactId>
         </dependency>
 
-        <!--dubbox-->
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-        </dependency>
+        <!--rest-->
+
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
