@@ -14,18 +14,6 @@ import java.io.Serializable;
 public class BaseReq implements Serializable{
 
     private static final long serialVersionUID = 6947098193840850628L;
-    /** 操作用户id */
-    protected String operUserId;
-    /** 操作类型add表示增加，edit表示修改 */
-    protected String operType;
-    /** 操作人*/
-    protected String operUserName;
-    protected String page;
-    protected String rows;
-
-    protected String startTime;
-    protected String endTime;
-
 
     /**
      * @Author      : kooing
